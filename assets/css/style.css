@@ -61,5 +61,12 @@ h2 {
 #userguess {
     padding: 10px;
     text-align: center;
-    
+}
+
+.wins {
+    text-align: center;
+}
+
+.losses {
+    text-align: center;
 }

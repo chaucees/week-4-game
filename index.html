@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Plant Mom Showndown</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link href="./assets/css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+
+            <!-- HEADER -->
+            <div class="row" id="rowheader">
+                <div class="col-md-12">
+                    <h1>Plant Mom Showdown</h1>                    
+                </div>
+                
+            <!-- GAME INSTRUCTIONS -->
+            <div class="row">
+                <div class="col-md-12" id="gameinstructions">
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four plants below. By clicking on a plant you will add a specific amount of points to your total score.</p>
+                    <p>You win the game by matching your total score to the random number displayed below. You loose the game if your total score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it and each time the game starts the value of the plants will change. </p>
+                    <p>Good luck!</p>
+                </div>
+            </div>
+
+            <!-- RADNOM NUMBER + WINS AND LOSSES -->
+            <div class="row">
+                <div class="col-md-6" id="randomnumber">
+                    <b>Number HERE</b>
+                </div>
+                <div class="col-md-6" id="winloss">
+                    <p><b>WINS:</b></p>
+                    <p><b>LOSSES:</b></p>
+                </div>
+            </div>
+
+            <!-- IMAGES -->
+            <div class="row">
+                <div class="col-md-3"><img src="./assets/images/plant1.png" width="150"></div>
+                <div class="col-md-3"><img src="./assets/images/plant2.png" width="150"></div>
+                <div class="col-md-3"><img src="./assets/images/plant3.png" width="150"></div>
+                <div class="col-md-3"><img src="./assets/images/plant4.png" width="150"></div>                
+            </div>
+
+            <!-- YOUR GUESS -->
+            <div class="row">
+                <div class="col-md-12" id="userguess">
+                    <h2>Your Guess Is: #</h2>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+    
+
+    <!-- Link Javascript stylesheet here at the bottom -->
+    <script src="./assets/javascript/game.js"></script>
+    </body>
+</html>

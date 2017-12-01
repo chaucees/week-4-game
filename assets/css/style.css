@@ -1,0 +1,65 @@
+body {
+    background-image:url("../images/bg.jpg");
+    background-size:150px;
+    background-repeat: repeat;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14pt;   
+
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    size: 42pt;
+    color: #5F9EA0;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;    
+    size: 14pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container-fluid {
+    background-color: #ffffff;
+    width: 60%;
+    padding: 10px;
+    margin-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: #5F9EA0 5px solid;
+}
+
+.row {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#rowheader {
+    text-align: center;
+    padding: 10px;
+}
+
+#gameinstructions {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 20pt;
+    font-size: 14pt;
+
+}
+
+#randomnumber {
+    padding: 10px;
+    
+}
+
+#winloss {
+    padding: 10px;
+    
+}
+
+#userguess {
+    padding: 10px;
+    text-align: center;
+    
+}

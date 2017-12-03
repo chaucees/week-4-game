@@ -1,5 +1,6 @@
 
 // DISPLAY RANDOM NUMBER
+
 randomNumberDisplay=Math.floor(Math.random()*50);
 document.getElementById("randomnumber").innerHTML=randomNumberDisplay;
 
@@ -7,8 +8,8 @@ document.getElementById("randomnumber").innerHTML=randomNumberDisplay;
 
 var counter = 0;
 var wins = 0;
-var looses = 0;
-var totalScoreAdded = [];
+var losses = 0;
+var totalScore = [];
 
 // ASSIGN RANDOM VALUE TO IMAGES
 
@@ -28,23 +29,23 @@ $("#plant4").val(plantFour);
 
 $("#plant1").on('click', function() {
 $('#userguess').html(plantOne);
-    totalScoreAdded = counter += plantOne;
-    $("#total-score").html(totalScoreAdded);
+    totalScore = counter += plantOne;
+    $("#total-score").html(totalScore);
   });  
 $("#plant2").on('click', function() { 
 $('#userguess').html(plantTwo);
-totalScoreAdded = counter += plantTwo;
-$("#total-score").html(totalScoreAdded);
+totalScore = counter += plantTwo;
+$("#total-score").html(totalScore);
 });  
 $("#plant3").on('click', function() {
 $('#userguess').html(plantThree);
-totalScoreAdded = counter += plantThree;
-$("#total-score").html(totalScoreAdded); 
+totalScore = counter += plantThree;
+$("#total-score").html(totalScore); 
 });  
 $("#plant4").on('click', function() {
 $('#userguess').html(plantFour);
-totalScoreAdded = counter += plantFour;
-$("#total-score").html(totalScoreAdded);
+totalScore = counter += plantFour;
+$("#total-score").html(totalScore);
 
 });  
 
@@ -52,16 +53,16 @@ $("#total-score").html(totalScoreAdded);
 
 function updateScore () {
 
-if (totalScoreAdded === randomNumberDisplay) {
-  $('#wins').html(counter++);
-  conosole.log(updateScore); }
+if (totalScore === randomNumberDisplay) {
+  $('#wins').text('' + wins);
+  wins++
+}
 
-else if (totalScoreAdded >= randomNumberDisplay) {
-  alert('you loose!');
+else if (totalScore >= randomNumberDisplay) {
+  losses++;
+  $('#losses').text('' + losses);
   
 };
 
-}
-
-$(updateScore).html('#wins'); 
+$(updateScore); }
 

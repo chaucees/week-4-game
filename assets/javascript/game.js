@@ -3,12 +3,14 @@
 randomNumberDisplay=Math.floor(Math.random()*50);
 document.getElementById("randomnumber").innerHTML=randomNumberDisplay;
 
+// DEFINE VARIABLES
 
 var counter = 0;
 var wins = 0;
 var looses = 0;
 
 // ASSIGN RANDOM VALUE TO IMAGES
+
 var plantOne = Math.floor((Math.random() * 12) +1 );
 var plantTwo = Math.floor((Math.random() * 12) +1 );
 var plantThree = Math.floor((Math.random() * 12) +1 );
@@ -20,33 +22,27 @@ $("#plant3").val(plantThree);
 $("#plant4").val(plantFour);
 
 
-// DISPLAYS THE VALUE OF THE IMAGE CLICKED IN YOUR YOUR GUESS DIV
+// DISPLAYS THE VALUE OF THE IMAGE CLICKED IN YOUR #USERGUESS
 
 $("#plant1").on('click', function() {
-
-    document.write 
-    // when clicked, add plant1 random value to total user guess
-    $('#userguess').html(plantOne);
-
-    if (plantOneValue > randomNumberDisplay) {
-        counter++;
-    }
+$('#userguess').html(plantOne);
 })
-// #plant-2 on click assign random value then add to score    
-$("#plant2").on('click', function() {
-    // when clicked, add plant1 random value to total user guess
-    $('#userguess').html(plantTwo);
+
+$("#plant2").on('click', function() { 
+$('#userguess').html(plantTwo);
 })
-// #plant-3 on click assign random value then add to score 
+
 $("#plant3").on('click', function() {
-    // when clicked, add plant1 random value to total user guess
-    $('#userguess').html(plantThree);
-})   
-// #plant-4 on click assign random value then add to score 
+$('#userguess').html(plantThree);
+})  
+
 $("#plant4").on('click', function() {
-    // when clicked, add plant1 random value to total user guess
-    $('#userguess').html(plantFour);
+$('#userguess').html(plantFour);
 })   
+
+// IF USERGUESS TOTAL IS LESS THAN RANDOMNUMBERDISPLAY CONTINUE TO ADD
+// IF USERGUESS TOTAL IS EXACTLY THE SAME AS RANDOMNUMBERDISPLAY ALERT "YOU WIN"
+//
 
 // If the user reaches the random number alert "win" if they go over the random number alert "try again"
 

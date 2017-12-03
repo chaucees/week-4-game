@@ -46,15 +46,22 @@ $('#userguess').html(plantFour);
 totalScoreAdded = counter += plantFour;
 $("#total-score").html(totalScoreAdded);
 
-  
 });  
 
+//UPDATE WINS AND LOSSES
+
+function updateScore () {
 
 if (totalScoreAdded === randomNumberDisplay) {
-  alert("You win!");    
-}
+  $('#wins').html(counter++);
+  conosole.log(updateScore); }
 
 else if (totalScoreAdded >= randomNumberDisplay) {
-  looses++;
-  alert("You lose!!");
-  $("#losses").html(counter++);}
+  alert('you loose!');
+  
+};
+
+}
+
+$(updateScore).html('#wins'); 
+

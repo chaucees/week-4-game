@@ -8,13 +8,14 @@ document.getElementById("randomnumber").innerHTML=randomNumberDisplay;
 var counter = 0;
 var wins = 0;
 var looses = 0;
+var totalScoreAdded = [];
 
 // ASSIGN RANDOM VALUE TO IMAGES
 
-var plantOne = Math.floor((Math.random() * 12) +1 );
-var plantTwo = Math.floor((Math.random() * 12) +1 );
-var plantThree = Math.floor((Math.random() * 12) +1 );
-var plantFour = Math.floor((Math.random() * 12) +1 );
+var plantOne = Math.floor((Math.random() * 15) +1 );
+var plantTwo = Math.floor((Math.random() * 15) +1 );
+var plantThree = Math.floor((Math.random() * 15) +1 );
+var plantFour = Math.floor((Math.random() * 15) +1 );
 
 $("#plant1").val(plantOne);
 $("#plant2").val(plantTwo);
@@ -24,30 +25,36 @@ $("#plant4").val(plantFour);
 
 // DISPLAYS THE VALUE OF THE IMAGE CLICKED IN YOUR #USERGUESS
 
+
 $("#plant1").on('click', function() {
 $('#userguess').html(plantOne);
-})
-
+    totalScoreAdded = counter += plantOne;
+    $("#total-score").html(totalScoreAdded);
+  });  
 $("#plant2").on('click', function() { 
 $('#userguess').html(plantTwo);
-})
-
+totalScoreAdded = counter += plantTwo;
+$("#total-score").html(totalScoreAdded);
+});  
 $("#plant3").on('click', function() {
 $('#userguess').html(plantThree);
-})  
-
+totalScoreAdded = counter += plantThree;
+$("#total-score").html(totalScoreAdded); 
+});  
 $("#plant4").on('click', function() {
 $('#userguess').html(plantFour);
-})   
+totalScoreAdded = counter += plantFour;
+$("#total-score").html(totalScoreAdded);
 
-// IF USERGUESS TOTAL IS LESS THAN RANDOMNUMBERDISPLAY CONTINUE TO ADD
-// IF USERGUESS TOTAL IS EXACTLY THE SAME AS RANDOMNUMBERDISPLAY ALERT "YOU WIN"
-//
-
-// If the user reaches the random number alert "win" if they go over the random number alert "try again"
+  
+});  
 
 
-// UPDATE WINS
+if (totalScoreAdded === randomNumberDisplay) {
+  alert("You win!");    
+}
 
-
-// UPDATE LOSSES
+else if (totalScoreAdded >= randomNumberDisplay) {
+  looses++;
+  alert("You lose!!");
+  $("#losses").html(counter++);}
